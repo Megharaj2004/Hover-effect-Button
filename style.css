@@ -1,0 +1,74 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.container{
+    background-color: #f2f2f2;
+    padding: 40px 80px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px; 
+    width: 25%;
+    height: 50% ;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button{
+    top: 5%;
+    left: 35%;
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgb(248, 11, 98);
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    /* transition: 1s; */
+    cursor: pointer;
+    z-index: 0;
+    overflow: hidden;
+    font-weight: bold;
+    box-shadow: 3px 4px grey;
+    transition: color 0.3s ease;
+    font-size: 100%;
+}
+button::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(248, 11, 98);
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+button:hover{
+    color: white;
+}
+
+button:hover::after{
+    width: 100%;
+}
+

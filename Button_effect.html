@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Form</h1>
+    <div class="container">
+      Name: <input type="text" name="name" placeholder="Enter name" required />
+      <br /><br />
+      Email:
+      <input type="email" name="email" id="email" placeholder="xyz@gmail.com" required/>
+      <br /><br />
+      Mobile:
+      <input
+        type="number"
+        name="mobile"
+        id="mobile"
+        placeholder="Enter mobile" required
+      />
+      <br /><br />
+      <button id="button" type="submit">Submit</button>
+    </div>
+    
+    <script>
+      const button = document.getElementById("button");
+      button.addEventListener('mousedown',()=>{
+          button.style.transform = 'translate(3px,4px)';
+          button.style.boxShadow = 'none';
+
+      });
+      
+      button.addEventListener('mouseup',()=>{
+          button.style.transform = 'translate(0px,0px)';
+          button.style.boxShadow = '3px 4px grey';
+      });
+
+      
+  </script>
+  </body>
+</html>
